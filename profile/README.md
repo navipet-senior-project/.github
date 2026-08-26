@@ -66,6 +66,7 @@ NaviPet is developed as a California State University, Long Beach senior project
 
 - [Khoi Hoang Do (@Ben2104)](https://github.com/Ben2104)
 - [@Kura-Yami](https://github.com/Kura-Yami)
+- [@thejomar](https://github.com/thejomar)
 
 Project work, decisions, and progress are documented in the two public repositories above.
 
