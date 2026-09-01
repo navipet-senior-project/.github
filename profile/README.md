@@ -3,7 +3,7 @@
 
   # NaviPet
 
-  **A student-built campus companion for California State University, Long Beach.**
+  **A student-built campus-navigation companion for California State University, Long Beach.**
 
   NaviPet combines walking navigation, class planning, task tracking, and a friendly virtual pet in one mobile experience.
 
@@ -12,7 +12,7 @@
 
 ## About the project
 
-NaviPet is a CSULB senior project designed to make moving through campus and managing the school day simpler. The mobile app brings together location-aware navigation and everyday academic tools, while the backend supplies a secure foundation for authenticated data and future services.
+NaviPet is a CSULB senior project that helps students navigate campus and find their destinations without the usual confusion. The mobile app brings together location-aware navigation and everyday academic tools, while the backend supplies a secure foundation for authenticated data and future services.
 
 The current project includes:
 
@@ -29,7 +29,7 @@ The current project includes:
 | Repository | Responsibility | Main technologies |
 | --- | --- | --- |
 | [**NaviPetFlutter**](https://github.com/navipet-senior-project/NaviPetFlutter) | Cross-platform NaviPet mobile application for Android and iOS | Flutter, Dart, Mapbox, Supabase |
-| [**NavipetBackend**](https://github.com/navipet-senior-project/NavipetBackend) | API, authentication boundary, application services, and database schema | TypeScript, Fastify, Supabase, PostgreSQL |
+| [**NavipetBackend**](https://github.com/navipet-senior-project/NavipetBackend) | API, authentication boundary, application services, email delivery, and database schema | TypeScript, Fastify, Render, Supabase, PostgreSQL, Resend |
 
 ## Architecture
 
@@ -38,12 +38,13 @@ flowchart LR
     User[Student] --> Mobile[NaviPet Flutter app]
     Mobile --> Mapbox[Mapbox services]
     Mobile --> Auth[Supabase Auth]
-    Mobile --> API[Fastify API]
+    Mobile --> API[Fastify API on Render]
     API --> Auth
     API --> Data[(Supabase PostgreSQL)]
+    API --> Email[Resend email service]
 ```
 
-The Flutter application owns the user experience and on-device navigation flow. Supabase Auth manages identity. The Fastify service validates access tokens and provides a trusted server boundary for application rules and protected data access. PostgreSQL policies keep profiles, classes, and task progress scoped to their owners.
+The Flutter application owns the user experience and on-device navigation flow. Supabase Auth manages identity. The Fastify service runs on Render, validates access tokens, and provides a trusted server boundary for application rules and protected data access. PostgreSQL policies keep profiles, classes, and task progress scoped to their owners. Resend handles transactional email delivery.
 
 ## Technology
 
@@ -51,7 +52,9 @@ The Flutter application owns the user experience and on-device navigation flow. 
 ![Dart](https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![Fastify](https://img.shields.io/badge/Fastify-000000?logo=fastify&logoColor=white)
+![Render](https://img.shields.io/badge/Render-000000?logo=render&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=white)
+![Resend](https://img.shields.io/badge/Resend-000000?logo=resend&logoColor=white)
 ![Mapbox](https://img.shields.io/badge/Mapbox-000000?logo=mapbox&logoColor=white)
 
 ## Start developing
@@ -64,9 +67,13 @@ The Flutter application owns the user experience and on-device navigation flow. 
 
 NaviPet is developed as a California State University, Long Beach senior project by:
 
-- [Khoi Hoang Do (@Ben2104)](https://github.com/Ben2104)
-- [@Kura-Yami](https://github.com/Kura-Yami)
-- [@thejomar](https://github.com/thejomar)
+| Team member | Role |
+| --- | --- |
+| [Khoi Do (@Ben2104)](https://github.com/Ben2104) | Full Stack Lead Developer / Project Manager |
+| [Jomar Hernandez (@thejomar)](https://github.com/thejomar) | UI/UX Designer / Mobile Developer / Frontend Developer |
+| [Will Chhuor (@will-chhuor)](https://github.com/will-chhuor) | Mobile Developer |
+| [Jake Nomoto (@GlazedKrispy)](https://github.com/GlazedKrispy) | Backend Developer |
+| [Jan Montemayor (@Kura-Yami)](https://github.com/Kura-Yami) | Full Stack Developer |
 
 Project work, decisions, and progress are documented in the two public repositories above.
 
