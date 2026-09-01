@@ -70,7 +70,7 @@ NaviPet is developed as a California State University, Long Beach senior project
 | Team member | Role |
 | --- | --- |
 | [Khoi Do (@Ben2104)](https://github.com/Ben2104) | Full Stack Lead Developer / Project Manager |
-| [Jomar Hernandez (@thejomar)](https://github.com/thejomar) | UI/UX Designer / Mobile Developer / Frontend Developer |
+| [Jomar Hernandez (@thejomar)](https://github.com/thejomar) | UI/UX Designer / Mobile Developer |
 | [Will Chhuor (@will-chhuor)](https://github.com/will-chhuor) | Mobile Developer |
 | [Jake Nomoto (@GlazedKrispy)](https://github.com/GlazedKrispy) | Backend Developer |
 | [Jan Montemayor (@Kura-Yami)](https://github.com/Kura-Yami) | Full Stack Developer |
