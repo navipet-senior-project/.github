@@ -83,7 +83,7 @@ All work is tracked on the [**NaviPet Product Roadmap**](https://github.com/orgs
 2. Create a branch from `main`: `feature/<issue-number>-short-name` or `fix/<issue-number>-short-name`.
 3. Commit using [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`, `fix:`, `docs:`, `chore:`).
 4. Open a pull request to `main` that references the story (`Refs navipet-senior-project/.github#<n>`) and move the card to **In Review / PR**.
-5. `main` is protected. Pull requests merge only after the required CI checks pass.
+5. `main` is protected in both code repositories: changes land through pull requests. In NavipetBackend, the Lint, Type check, Tests, Build and Security audit checks must pass.
 6. After merge, attach demo evidence to the story and move it to **Done** once every item in its Definition of Done is checked.
 
 ## Contributing
